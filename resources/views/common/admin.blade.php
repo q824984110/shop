@@ -157,11 +157,11 @@
                         </ul>
                     </li>
                      <li>
-                        <a href="#"><i class="icon-list"></i> 属性管理</a>
+                        <a href="#"><i class="icon-list"></i>导航栏管理</a>
                         <ul>
-                            <li><a href="">Layouts</a></li>
+                            <li><a href="/admin/nav">查看导航栏</a></li>
                             
-                            <li><a href="">Wizard</a></li>
+                            <li><a href="/admin/nav/create">添加导航</a></li>
                         </ul>
                     </li>
                     <li>

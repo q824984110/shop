@@ -149,7 +149,7 @@ class AdminsController extends Controller
 
         $this->validate($request, [
             'username' => 'required|regex:/^\w{6,12}$/',
-            'name' => 'required|regex:/^[\x80-\xff_A-Za-z0-9]',
+            'name' => 'required|regex:/^[\x80-\xff_A-Za-z0-9]/',
             'password' => 'required|regex:/^\S{8,16}$/',
             'profile' => 'required',
             'repassword'=>'same:password',

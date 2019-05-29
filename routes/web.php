@@ -6,7 +6,7 @@ Route::post('home/dologin','Home\LoginController@dologin');
 Route::get('/admin/showper','Admin\RoleController@showper');
 Route::get('admin/captcha','Admin\LoginController@captcha');
 //后台
-Route::group(['middleware'=>'login'], function(){
+Route::group(['middleware'=>['login','roleper']], function(){
 	//后台的首页
 	Route::get('admins','Admin\IndexController@index');
 	//修改头像
@@ -43,10 +43,14 @@ Route::group(['middleware'=>'login'], function(){
 	Route::resource('/admin/category','Admin\CategoryController');
 	//商品管理
 	Route::resource('/admin/goods','Admin\GoodsController');
+	//导航栏管理
+	Route::resource('/admin/nav','Admin\NavController');
 });
 
 //前台
 Route::get('/','Home\IndexController@index');
+
+
 Route::group(['middleware'=>'ulogin'], function(){
 	
 });
